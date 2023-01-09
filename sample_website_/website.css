@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Allura&display=swap"');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: black;
+  line-height: 20px;
+}
+h1 .title {
+  margin-bottom: 20px;
+  color: #444444;
+  text-transform: uppercase;
+  font-size: 32px;
+  word-spacing: 25px;
+  letter-spacing: 5px;
+}
+.main_container {
+  position: relative;
+}
+/* Navigation Bar*/
+.navbar {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+}
+.logo a {
+  font-family: "Allura", cursive;
+  font-size: 32px;
+  font-weight: 300;
+  color: #fb2274;
+}
+.navbar .navbar_elements ul {
+  display: flex;
+}
+.navbar .navbar_elements ul li {
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+.navbar .navbar_elements ul li a {
+  color: darkslategray;
+  font-weight: 500;
+}
+/*banner image*/
+.banner_image {
+  background: url("web/bg.jpg") no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baner_content {
+  text-align: center;
+  color: darkslategray;
+  margin-bottom: 10px;
+}
+.baner_content h1 {
+  text-transform: uppercase;
+  line-height: 32px;
+}
+.baner_content h1 span {
+  color: #fb2274;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+/*history*/
+.history,
+.services,
+.developer,
+.contact {
+  padding: 5% 10%;
+  text-align: center;
+}
+.btn a {
+  width: 180px;
+  height: 35px;
+  display: block;
+  border: 2px solid #fb2274;
+  line-height: 35px;
+  margin: 25px auto 0px;
+  text-align: center;
+  color: #fb2274;
+}
+/*services*/
+.services {
+  background: #f5f5f5;
+}
+.diff_service {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+}
+.diff_service_items {
+  width: 30%;
+}
+.diff_service_items img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 25px;
+}
+.diff_service_items h3 {
+  color: #fb2274;
+  margin-bottom: 25px;
+}
+/*developers*/
+.developer {
+  margin-top: 35px;
+}
+.teams .team {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.teams .team_member {
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+.teams .team img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 25px;
+  transition: all 0.5s ease;
+}
+.teams .team :hover img {
+  transform: scale(1.1);
+}
+.contact {
+  margin-top: 10px;
+  background: #191919;
+}
+.box input[type="text"],
+.box input[type="email"],
+textarea {
+  border: 0;
+  background: none;
+  display: flex;
+  align-content: center;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 250px;
+  border-radius: 20px;
+  color: white;
+  transition: 0.25;
+  resize: none;
+}
+.box h1 {
+  color: white;
+}
+.box input[type="text"]:focus,
+.box input[type="email"]:focus,
+textarea:focus {
+  width: 350px;
+  border-color: aqua;
+}
+.box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: flex;
+  margin: 20px auto;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 250px;
+  border-radius: 20px;
+  color: white;
+  transition: 0.5;
+  cursor: pointer;
+  text-align: center;
+}
+.footer {
+  padding: 5px 0;
+  width: 100%;
+  background-color: lightgrey;
+}
+.footer p {
+  color: #3498db;
+  text-align: center;
+  margin-top: 5px;
+}
+.arrow {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: #fb2274;
+  border-radius: 50%;
+}
+.arrow img {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+  }
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .navbar ul li {
+    padding: 5px;
+  }
+  .logo {
+    margin-bottom: 2px;
+  }
+  .baner_content {
+    padding: 1rem;
+    margin-top: 200px;
+  }
+  .arrow {
+    position: fixed;
+    right: 10px;
+  }
+  .diff_service {
+    flex-direction: column;
+  }
+  .diff_service_items {
+    width: 100%;
+  }
+  .teams .team {
+    display: block;
+  }
+  .teams .team_member {
+    width: 100%;
+  }
+  .box input[type="text"]:focus,
+  .box input[type="email"]:focus,
+  textarea:focus {
+    width: 270px;
+  }
+  .box input[type="text"],
+  .box input[type="email"],
+  textarea {
+    width: 220px;
+  }
+  .box input[type="submit"] {
+    width: 220px;
+  }
+}
